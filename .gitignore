@@ -1,0 +1,23 @@
+# Pastas de trabalho — não vão pra produção
+brandkit/
+prd/
+
+# Cache do Firecrawl (scraping local de techforge.dev)
+.firecrawl/
+**/.firecrawl/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Arquivos temporários
+*.log
+*.tmp

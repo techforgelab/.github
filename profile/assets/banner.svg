@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" role="img" aria-label="TechForge — Transformamos problemas em solução.">
+  <title>TechForge — Transformamos problemas em solução.</title>
+  <desc>Banner da organização TechForge. Wordmark em mono caps com tagline oficial e identificação técnica.</desc>
+
+  <defs>
+    <!-- Glow radial laranja atrás do wordmark -->
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F97316" stop-opacity="0.22"/>
+      <stop offset="40%" stop-color="#F97316" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#F97316" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Gradient sutil no wordmark (laranja saturado no meio, levemente mais escuro nas pontas) -->
+    <linearGradient id="wordmarkFill" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EA580C"/>
+      <stop offset="50%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
+
+    <!-- Padrão de grid de pontos sutil (estilo blueprint dev) -->
+    <pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#262626"/>
+    </pattern>
+
+    <!-- Mask radial pra fazer o grid sumir nas bordas (vinheta) -->
+    <radialGradient id="dotsMask" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="white" stop-opacity="1"/>
+      <stop offset="70%" stop-color="white" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="dotsMaskApplied">
+      <rect width="1280" height="360" fill="url(#dotsMask)"/>
+    </mask>
+  </defs>
+
+  <!-- Fundo principal -->
+  <rect width="1280" height="360" fill="#0A0A0A"/>
+
+  <!-- Grid de pontos com vinheta -->
+  <rect width="1280" height="360" fill="url(#dots)" mask="url(#dotsMaskApplied)"/>
+
+  <!-- Glow radial central -->
+  <ellipse cx="640" cy="180" rx="540" ry="200" fill="url(#glow)"/>
+
+  <!-- Marcadores de canto técnico (brackets de blueprint) -->
+  <g stroke="#3F3F3F" stroke-width="1" fill="none">
+    <!-- Canto superior esquerdo -->
+    <path d="M 40 60 L 40 40 L 60 40"/>
+    <!-- Canto superior direito -->
+    <path d="M 1220 40 L 1240 40 L 1240 60"/>
+    <!-- Canto inferior esquerdo -->
+    <path d="M 40 300 L 40 320 L 60 320"/>
+    <!-- Canto inferior direito -->
+    <path d="M 1220 320 L 1240 320 L 1240 300"/>
+  </g>
+
+  <!-- Coordenadas técnicas nos cantos (estilo blueprint) -->
+  <g font-family="'Geist Mono', 'JetBrains Mono', 'Fira Code', ui-monospace, monospace" font-size="10" fill="#6B6B6B" letter-spacing="1">
+    <text x="56" y="52">[ tf://org ]</text>
+    <text x="1224" y="52" text-anchor="end">v.1</text>
+    <text x="56" y="316">br-mg-bhz</text>
+    <text x="1224" y="316" text-anchor="end">est. 2023</text>
+  </g>
+
+  <!-- Linha técnica acima do wordmark -->
+  <g stroke="#262626" stroke-width="1">
+    <line x1="400" y1="115" x2="560" y2="115"/>
+    <line x1="720" y1="115" x2="880" y2="115"/>
+  </g>
+  <!-- Acento laranja no centro da linha -->
+  <line x1="615" y1="115" x2="665" y2="115" stroke="#F97316" stroke-width="2"/>
+
+  <!-- Wordmark principal: TECHFORGE em mono caps -->
+  <text
+    x="640" y="200"
+    text-anchor="middle"
+    font-family="'Geist Mono', 'JetBrains Mono', 'Fira Code', ui-monospace, monospace"
+    font-size="78"
+    font-weight="500"
+    letter-spacing="14"
+    fill="url(#wordmarkFill)"
+  >TECHFORGE</text>
+
+  <!-- Underline laranja fina sob o wordmark -->
+  <line x1="540" y1="232" x2="740" y2="232" stroke="#F97316" stroke-width="1.5" stroke-opacity="0.6"/>
+
+  <!-- Tagline oficial em Geist Sans -->
+  <text
+    x="640" y="270"
+    text-anchor="middle"
+    font-family="'Geist', 'Inter', -apple-system, system-ui, sans-serif"
+    font-size="20"
+    font-weight="400"
+    fill="#F5F5F5"
+  >Transformamos problemas em solução.</text>
+
+  <!-- Sub-tagline técnica em mono -->
+  <text
+    x="640" y="302"
+    text-anchor="middle"
+    font-family="'Geist Mono', 'JetBrains Mono', 'Fira Code', ui-monospace, monospace"
+    font-size="12"
+    font-weight="500"
+    letter-spacing="3"
+    fill="#A0A0A0"
+  >CONSULTORIA  ·  ENGENHARIA  ·  DADOS  ·  IA</text>
+</svg>
